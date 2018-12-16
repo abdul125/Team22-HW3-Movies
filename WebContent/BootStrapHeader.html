@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+	integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+	crossorigin="anonymous">
+</head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+		var size = "${sessionScope.SC.getItems().size()}"
+		$("#ShoppingCartNav").text("Shopping Cart (" + size + ")");
+	});
+</script>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="CustomerHomePage">MovieTicket</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarsExampleDefault"
+		aria-controls="navbarsExampleDefault" aria-expanded="false"
+		aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="ViewOrders">View	Orders</a>
+			</li>
+			<li class="nav-item">
+				<a id="ShoppingCartNav" class="nav-link" href="ViewAndCheckoutShoppingCart.jsp"></a></li>					
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<c:out value="${userBean.userName}"/>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown01">
+				
+					<a href="ChangePassword.jsp" class="dropdown-item" >Change Password</a>
+					
+					<form action=Logout class="dropdown-item" method=post>
+					<input type="submit"  class="dropdown-item" value="Logout" />
+					</form>
+				</div>
+				</li>
+		</ul>
+	</div>
+	</nav>
+</body>
+</html>
