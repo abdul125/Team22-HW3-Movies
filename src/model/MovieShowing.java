@@ -3,9 +3,6 @@ package model;
 import java.util.Date;
 import java.io.Serializable;
 public class MovieShowing implements Serializable {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private int Id;
 	private int movieID;
