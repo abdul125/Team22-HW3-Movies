@@ -2,11 +2,6 @@ package model;
 
 import java.util.Date;
 import java.io.Serializable;
-/*
- * which one should we use? 
-import java.sql.Date;
-import java.util.Date; >> i chose this for now
-*/
 public class MovieShowing implements Serializable {
 	/**
 	 * 
